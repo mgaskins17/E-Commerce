@@ -23,15 +23,17 @@ Product.belongsToMany(Tag, {
     foreignKey: 'product_id',
     unique: false,
   },
+  as: 'productTags'
 });
 
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: {
-    model: 'ProductTag',
+    model: ProductTag,
     foreignKey: 'tag_id',
     unique: false
   },
+  as: 'tagProducts'
 });
 
 
