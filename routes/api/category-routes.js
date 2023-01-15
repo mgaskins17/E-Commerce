@@ -93,9 +93,7 @@ router.delete('/:id', async (req, res) => {
         },
       }
     )
-
     res.status(200).json(categoryData); // I believe this is sending a boolean value confirming it was deleted
-
   } catch(err) {
     res.status(500).json(err);
   }
